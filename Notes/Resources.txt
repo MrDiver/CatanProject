@@ -1,0 +1,17 @@
+-- Resources --
+
+Felder die Rohstoffe generieren
+Wald -> Holz
+Hügelland = Lehm
+Weideland = Wolle
+Ackerland = Getreide
+Gebirge = Erz
+
+
+
+
+Siedlungen
+
+Straßen
+
+Städte
