@@ -8,14 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "HexMap",
+"language": "GDScript",
+"path": "res://Game/scripts/HexMap.gd"
+}, {
+"base": "Spatial",
+"class": "HexTile",
+"language": "GDScript",
+"path": "res://Game/scripts/HexTile.gd"
+} ]
 _global_script_class_icons={
-
+"HexMap": "",
+"HexTile": ""
 }
 
 [application]
 
 config/name="Siedler Catan"
+run/main_scene="res://Game/scenes/RunningGame.tscn"
 config/icon="res://icon.png"
 
 [rendering]

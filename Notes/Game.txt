@@ -5,7 +5,7 @@ Jeder Spieler Baut 2 Siedlungen und 2 Straßen
 Zuerst wird jeder spieler von a nach b durchgegangen und dann von b nach a
 
 
-Die Felder besitzen zahlen von 1 bis 12 und man bekommt die jeweiligen ressourcen wenn man die Zahl würfelt
+Die Felder besitzen zahlen von 2 bis 12 und man bekommt die jeweiligen ressourcen wenn man die Zahl würfelt
 
 
 -- Baukosten --
@@ -15,3 +15,4 @@ Stadt: 2xGetreide,3xErz
 Entwicklung: Wolle,Getreide,Erz
 
 -- Handeln --
+Einfach karten tauschen

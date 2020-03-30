@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hexPrimitive.obj-8d6e5f944ce8b9ecfae322afcc7d9968.mesh"
+
+[deps]
+
+files=[ "res://.import/hexPrimitive.obj-8d6e5f944ce8b9ecfae322afcc7d9968.mesh" ]
+
+source_file="res://Game/models/hexPrimitive.obj"
+dest_files=[ "res://.import/hexPrimitive.obj-8d6e5f944ce8b9ecfae322afcc7d9968.mesh", "res://.import/hexPrimitive.obj-8d6e5f944ce8b9ecfae322afcc7d9968.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
