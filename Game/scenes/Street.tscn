@@ -7,7 +7,7 @@
 [ext_resource path="res://Game/scripts/Street.gd" type="Script" id=5]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 2.86534, 0.186572, 0.182066 )
+extents = Vector3( 3.11575, 0.186572, 0.364468 )
 
 [sub_resource type="CubeMesh" id=2]
 
@@ -19,7 +19,7 @@ albedo_color = Color( 0.737255, 0.968627, 1, 0.584314 )
 script = ExtResource( 5 )
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 0.737, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 1 )

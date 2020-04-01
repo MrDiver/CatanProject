@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/sprites/wurfel.png" type="Texture" id=1]
+[ext_resource path="res://Game/scripts/Wurfel.gd" type="Script" id=2]
+
+[node name="Würfel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 17.1883
+margin_top = -60.0992
+margin_right = 137.188
+margin_bottom = -22.0992
+text = "Würfeln"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W1" type="Sprite" parent="Button"]
+position = Vector2( 35.8106, -37.2784 )
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="W2" type="Sprite" parent="Button"]
+position = Vector2( 81.3862, -37.2784 )
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="VScrollBar" type="VScrollBar" parent="Button"]
+margin_left = 135.0
+margin_top = -54.0
+margin_right = 315.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button/VScrollBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 13.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

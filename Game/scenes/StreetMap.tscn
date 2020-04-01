@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game/scenes/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/scenes/Street.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/scenes/SiedStadt.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/sprites/hafen.png" type="Texture" id=4]
 
 [node name="StreetMap" type="Spatial"]
 
@@ -395,3 +396,59 @@ transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 14, 0.82728
 
 [node name="SiedStadt12" parent="Siedlungen" instance=ExtResource( 3 )]
 transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0.827284, 15.9923 )
+
+[node name="Hafen" type="Sprite3D" parent="."]
+transform = Transform( 2.59808, -1.5, -2.18557e-08, 0, -1.31134e-07, 1, -1.5, -2.59808, -3.78552e-08, -2.74187, -0.0134705, -16.7909 )
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Hafen2" type="Sprite3D" parent="."]
+transform = Transform( 2.59808, -1.5, -2.18557e-08, 0, -1.31134e-07, 1, -1.5, -2.59808, -3.78552e-08, -2.74187, -0.0134705, -16.7909 )
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Hafen3" type="Sprite3D" parent="."]
+transform = Transform( 2.59808, -1.5, -2.18557e-08, 0, -1.31134e-07, 1, -1.5, -2.59808, -3.78552e-08, -13.1749, -0.0134705, -10.7369 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 3
+
+[node name="Hafen4" type="Sprite3D" parent="."]
+transform = Transform( -1.31134e-07, -3, -4.37114e-08, 0, -1.31134e-07, 1, -3, 1.31134e-07, 1.91069e-15, -19.4243, -0.0134704, 0.0434824 )
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Hafen5" type="Sprite3D" parent="."]
+transform = Transform( -2.59808, -1.5, -2.18557e-08, 0, -1.31134e-07, 1, -1.5, 2.59808, 3.78552e-08, -13.1983, -0.0673229, 10.7464 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 4
+
+[node name="Hafen6" type="Sprite3D" parent="."]
+transform = Transform( -2.59808, -1.5, -2.18557e-08, 0, -1.31134e-07, 1, -1.5, 2.59808, 3.78552e-08, -2.68567, -0.0673229, 16.7364 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 5
+
+[node name="Hafen7" type="Sprite3D" parent="."]
+transform = Transform( -2.59808, 1.5, 2.18557e-08, 0, -1.31134e-07, 1, 1.5, 2.59808, 3.78552e-08, 9.68081, -0.0673229, 16.7134 )
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Hafen8" type="Sprite3D" parent="."]
+transform = Transform( -1.31134e-07, 3, 4.37114e-08, 0, -1.31134e-07, 1, 3, 1.31134e-07, 1.91069e-15, 15.853, -0.0673228, 6.0601 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 1
+
+[node name="Hafen9" type="Sprite3D" parent="."]
+transform = Transform( -1.31134e-07, 3, 4.37114e-08, 0, -1.31134e-07, 1, 3, 1.31134e-07, 1.91069e-15, 15.853, -0.0673228, -5.9399 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 2
+
+[node name="Hafen10" type="Sprite3D" parent="."]
+transform = Transform( 2.59808, 1.5, 2.18557e-08, 0, -1.31134e-07, 1, 1.5, -2.59808, -3.78552e-08, 9.65326, -0.0673229, -16.7217 )
+texture = ExtResource( 4 )
+hframes = 6
+frame = 3

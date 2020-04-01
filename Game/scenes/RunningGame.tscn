@@ -1,44 +1,40 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Game/scenes/StreetMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/textures/wood_texture_background.jpg" type="Texture" id=2]
+[ext_resource path="res://Game/scripts/RunningGame.gd" type="Script" id=3]
+[ext_resource path="res://Game/scenes/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/scripts/CameraHelper.gd" type="Script" id=5]
+[ext_resource path="res://Game/scenes/Würfel.tscn" type="PackedScene" id=6]
 
-[sub_resource type="ProceduralSky" id=4]
-
-[sub_resource type="Environment" id=1]
-background_mode = 3
-background_sky = SubResource( 4 )
-background_energy = 0.97
-ssao_enabled = true
-adjustment_enabled = true
-
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
 roughness_texture = ExtResource( 2 )
 
-[sub_resource type="PlaneMesh" id=3]
-material = SubResource( 2 )
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
 size = Vector2( 100, 100 )
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="ProceduralSky" id=3]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.53702, 0.84357, 0, -0.84357, 0.53702, 0, 19.9688, 16.5165 )
-environment = SubResource( 1 )
-current = true
+[sub_resource type="Environment" id=4]
+background_mode = 3
+background_sky = SubResource( 3 )
+background_energy = 0.86
+ambient_light_energy = 0.48
+adjustment_enabled = true
+adjustment_contrast = 1.24
+
+[node name="RunningGame" type="Spatial"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+script = ExtResource( 3 )
 
 [node name="Table" type="Spatial" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="Table"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.181972, 0 )
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 material/0 = null
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.443806, 0.64509, 0.622009, -0.812714, -0.00268382, 0.582657, 0.377536, -0.764102, 0.523082, 0, 12.3648, 0 )
-light_energy = 1.06
-shadow_enabled = true
-shadow_color = Color( 0.666667, 0.552941, 0.333333, 1 )
 
 [node name="OmniLight" type="SpotLight" parent="."]
 transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, 48.6666, 0 )
@@ -48,3 +44,34 @@ shadow_enabled = true
 spot_range = 128.1
 
 [node name="StreetMap" parent="." instance=ExtResource( 1 )]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1.13669, -0.447974, 1.58343, -1.62543, -0.00536799, 1.16531, -0.256766, -1.94918, -0.367125, 0, 12.3648, 0 )
+light_energy = 1.3
+light_specular = 0.34
+shadow_enabled = true
+shadow_bias = -0.01
+
+[node name="CameraHelper" type="Spatial" parent="."]
+script = ExtResource( 5 )
+
+[node name="Camera" parent="CameraHelper" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 19.632, 10 )
+environment = SubResource( 4 )
+current = true
+fov = 82.8
+far = 8192.0
+
+[node name="Label" type="Label" parent="CameraHelper/Camera"]
+margin_left = 10.8711
+margin_top = 7.94429
+margin_right = 59.8711
+margin_bottom = 21.9443
+text = "COLOR:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Würfel" parent="." instance=ExtResource( 6 )]
+margin_top = 482.0
+margin_right = -687.0

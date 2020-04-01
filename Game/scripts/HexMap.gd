@@ -10,6 +10,7 @@ var fields = ["Wald","Wald","Wald","Wald",
 				"Wueste"]
 
 func _ready():
+	seed(Globals.SEED)
 	var childs = self.get_children()
 	for c in childs:
 		#Setting tile types random
@@ -25,4 +26,4 @@ func _ready():
 		var tmpnum = numbers[i]
 		numbers.remove(i)
 		c.setNumber(tmpnum)
-		print("Set: ",tmpnum," Numbers:",numbers)
+		#print("Set: ",tmpnum," Numbers:",numbers)

@@ -38,7 +38,7 @@ func setNumber(a:int):
 		
 	Coin.set_frame(tmp)
 	Coin.set_visible(true)
-	print("Got: ",a," and set:",tmp)
+	#print("Got: ",a," and set:",tmp)
 
 func setType(n):
 	Getreide.set_visible(false)

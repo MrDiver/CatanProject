@@ -7,7 +7,7 @@ onready var blue = $"Area/CollisionShape/StreetBlue"
 onready var transparent = $"Area/CollisionShape/Transparent"
 var mouseOver : bool = false
 var isBuilt : bool = false
-
+var local_color = ""
 func _ready():
 	$Area.connect("mouse_entered",self,"mouse_entered")
 	$Area.connect("mouse_exited",self,"mouse_exited")
@@ -17,9 +17,36 @@ func mouse_entered():
 func mouse_exited():
 	mouseOver = false
 
-func _process(delta):
+remotesync func buildWithColor(s):
+	isBuilt = true
+	local_color = s
+	if s == "Rot":
+		red.show()
+	elif s == "Gelb":
+		yellow.show()
+	elif s == "Blau":
+		blue.show()
+	elif s == "Gruen":
+		green.show()
+
+remotesync func destroy():
+	isBuilt = false
+	red.hide()
+	yellow.hide()
+	blue.hide()
+	green.hide()
+
+func _input(event):
 	if not isBuilt:
 		if mouseOver:
-			transparent.set_visible(true)
+			transparent.show()
+			if Input.is_action_just_pressed("LeftMouseButton"):
+				transparent.hide()
+				rpc("buildWithColor",Globals.color)
 		else:
-			transparent.set_visible(false)
+			transparent.hide()
+	else:
+		if mouseOver:
+			if local_color == Globals.color:
+				if Input.is_action_just_pressed("LeftMouseButton"):
+					rpc("destroy")

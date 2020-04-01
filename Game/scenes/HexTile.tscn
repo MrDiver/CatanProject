@@ -16,12 +16,12 @@ script = ExtResource( 2 )
 visible = false
 
 [node name="HexSheep" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="HexStein" parent="." instance=ExtResource( 1 )]
 visible = false
 
 [node name="HexWald" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="HexWueste" parent="." instance=ExtResource( 7 )]
 visible = false

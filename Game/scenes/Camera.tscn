@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 3
+background_sky = SubResource( 1 )
+background_energy = 0.97
+ssao_enabled = true
+adjustment_enabled = true
+
+[node name="Camera" type="Camera"]
+transform = Transform( 1, 0, 0, 0, 0.53702, 0.84357, 0, -0.84357, 0.53702, 0, 19.9688, 16.5165 )
+environment = SubResource( 2 )

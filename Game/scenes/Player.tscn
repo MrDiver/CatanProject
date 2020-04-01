@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/scripts/Player.gd" type="Script" id=2]
+
+[node name="Player" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="Label" type="Label" parent="Camera"]
+visible = false
+margin_left = 30.0
+margin_top = 15.0
+margin_right = 70.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

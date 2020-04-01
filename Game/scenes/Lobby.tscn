@@ -1,0 +1,186 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/scripts/Lobby.gd" type="Script" id=1]
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = -105.316
+margin_right = 54.0
+margin_bottom = -67.3158
+text = "Host Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = -20.0526
+margin_right = 54.0
+margin_bottom = 17.9474
+text = "Join Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -54.0
+margin_top = 50.4737
+margin_right = 54.0
+margin_bottom = 88.4737
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 442.0
+margin_bottom = 591.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ipline" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 138.79
+margin_top = 16.421
+margin_right = 252.79
+margin_bottom = 40.421
+text = "127.0.0.1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="portline" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 141.579
+margin_top = -63.4211
+margin_right = 246.579
+margin_bottom = -39.4211
+text = "4848"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seedline" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 139.526
+margin_top = -127.789
+margin_right = 241.526
+margin_bottom = -103.789
+text = "1234"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 95.5789
+margin_top = -60.3158
+margin_right = 137.579
+margin_bottom = -46.3158
+text = "Port:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SeedLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 93.4736
+margin_top = -121.368
+margin_right = 135.474
+margin_bottom = -107.368
+text = "Seed:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SeedLabel2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 101.737
+margin_top = 21.6316
+margin_right = 119.737
+margin_bottom = 35.6316
+text = "IP:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -65.5
+margin_top = 22.1053
+margin_right = 65.5
+margin_bottom = 53.1053
+text = "SIEDLER VON CATAN
+CUSTOM"
+align = 1
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 93.2632
+margin_top = -158.947
+margin_right = 133.263
+margin_bottom = -144.947
+text = "Name: "
+
+[node name="nameline" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 145.421
+margin_top = -168.0
+margin_right = 245.421
+margin_bottom = -144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HostButton" to="." method="_on_HostButton_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_JoinButton_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="text_changed" from="nameline" to="." method="_on_nameline_text_changed"]
