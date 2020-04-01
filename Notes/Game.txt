@@ -16,3 +16,10 @@ Entwicklung: Wolle,Getreide,Erz
 
 -- Handeln --
 Einfach karten tauschen
+
+
+
+- reset button seed
+- robber
+- liste
+- chat

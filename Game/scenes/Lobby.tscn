@@ -2,37 +2,33 @@
 
 [ext_resource path="res://Game/scripts/Lobby.gd" type="Script" id=1]
 
-[node name="Lobby" type="Control"]
+[node name="Lobby" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HostButton" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -54.0
-margin_top = -105.316
-margin_right = 54.0
-margin_bottom = -67.3158
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "Host Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="JoinButton" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -54.0
-margin_top = -20.0526
-margin_right = 54.0
-margin_bottom = 17.9474
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "Join Game"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,143 +36,111 @@ __meta__ = {
 
 [node name="Start" type="Button" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -54.0
-margin_top = 50.4737
-margin_right = 54.0
-margin_bottom = 88.4737
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "Start Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 442.0
-margin_bottom = 591.0
+margin_left = 20.0
+margin_top = 293.0
+margin_right = 1004.0
+margin_bottom = 307.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ipline" type="LineEdit" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 138.79
-margin_top = 16.421
-margin_right = 252.79
-margin_bottom = 40.421
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "127.0.0.1"
 align = 1
+caret_blink = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="portline" type="LineEdit" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 141.579
-margin_top = -63.4211
-margin_right = 246.579
-margin_bottom = -39.4211
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "4848"
 align = 1
+caret_blink = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="seedline" type="LineEdit" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 139.526
-margin_top = -127.789
-margin_right = 241.526
-margin_bottom = -103.789
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 text = "1234"
+caret_blink = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PortLabel" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 95.5789
-margin_top = -60.3158
-margin_right = 137.579
-margin_bottom = -46.3158
+margin_left = 20.0
+margin_top = 293.0
+margin_right = 1004.0
+margin_bottom = 307.0
 text = "Port:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SeedLabel" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 93.4736
-margin_top = -121.368
-margin_right = 135.474
-margin_bottom = -107.368
+margin_left = 20.0
+margin_top = 293.0
+margin_right = 1004.0
+margin_bottom = 307.0
 text = "Seed:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SeedLabel2" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 101.737
-margin_top = 21.6316
-margin_right = 119.737
-margin_bottom = 35.6316
+margin_left = 20.0
+margin_top = 293.0
+margin_right = 1004.0
+margin_bottom = 307.0
 text = "IP:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -65.5
-margin_top = 22.1053
-margin_right = 65.5
-margin_bottom = 53.1053
+margin_left = 20.0
+margin_top = 284.0
+margin_right = 1004.0
+margin_bottom = 315.0
 text = "SIEDLER VON CATAN
 CUSTOM"
 align = 1
 
 [node name="Label3" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 93.2632
-margin_top = -158.947
-margin_right = 133.263
-margin_bottom = -144.947
+margin_left = 20.0
+margin_top = 293.0
+margin_right = 1004.0
+margin_bottom = 307.0
 text = "Name: "
 
 [node name="nameline" type="LineEdit" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 145.421
-margin_top = -168.0
-margin_right = 245.421
-margin_bottom = -144.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
+caret_blink = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
