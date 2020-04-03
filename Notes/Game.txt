@@ -16,3 +16,10 @@ Entwicklung: Wolle,Getreide,Erz
 
 -- Handeln --
 Einfach karten tauschen
+
+
+
+- reset button
+- robber
+- resources list
+- Zahl verschwindet nicht auf wüste bei neugenerierung

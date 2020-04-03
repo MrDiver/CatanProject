@@ -1,15 +1,19 @@
 extends Spatial
 class_name HexMap
 
-var numbers = [2,3,3,4,4,5,5,6,6,8,8,9,9,10,10,11,11,12]
-var fields = ["Wald","Wald","Wald","Wald",
+
+
+func _ready():
+	pass
+
+func regenMap():
+	var numbers = [2,3,3,4,4,5,5,6,6,8,8,9,9,10,10,11,11,12]
+	var fields = ["Wald","Wald","Wald","Wald",
 				"Schafe","Schafe","Schafe","Schafe",
 				"Getreide","Getreide","Getreide","Getreide",
 				"Lehm","Lehm","Lehm",
 				"Stein","Stein","Stein",
 				"Wueste"]
-
-func _ready():
 	seed(Globals.SEED)
 	var childs = self.get_children()
 	for c in childs:

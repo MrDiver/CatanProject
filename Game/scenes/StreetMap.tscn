@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game/scenes/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/scenes/Street.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/scenes/SiedStadt.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/sprites/hafen.png" type="Texture" id=4]
+[ext_resource path="res://Game/scenes/StreetMap.gd" type="Script" id=5]
+[ext_resource path="res://Game/scripts/NewMap.gd" type="Script" id=6]
 
 [node name="StreetMap" type="Spatial"]
+script = ExtResource( 5 )
 
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
@@ -452,3 +455,45 @@ transform = Transform( 2.59808, 1.5, 2.18557e-08, 0, -1.31134e-07, 1, 1.5, -2.59
 texture = ExtResource( 4 )
 hframes = 6
 frame = 3
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -124.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 44.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewMap" type="Button" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -49.0
+margin_bottom = 22.0
+text = "NEW"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seedline" type="LineEdit" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -120.319
+margin_right = -51.3195
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -110.0
+margin_top = 26.0
+margin_right = -8.0
+margin_bottom = 40.0
+text = "Seed: "
+[connection signal="pressed" from="Control/NewMap" to="." method="_on_NewMap_pressed"]

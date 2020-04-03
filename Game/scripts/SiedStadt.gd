@@ -63,7 +63,7 @@ remotesync func destroy():
 	blueS.hide()
 	greenS.hide()
 
-func _input(event):
+func _process(_delta):
 	if not isBuilt:
 		if mouseOver:
 			transparent.show()

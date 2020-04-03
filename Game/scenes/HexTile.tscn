@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Game/models/HexStein.glb" type="PackedScene" id=1]
 [ext_resource path="res://Game/scripts/HexTile.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Game/models/HexWald.glb" type="PackedScene" id=6]
 [ext_resource path="res://Game/models/HexWueste.glb" type="PackedScene" id=7]
 [ext_resource path="res://Game/sprites/coins.png" type="Texture" id=8]
+[ext_resource path="res://Game/scenes/Thief.tscn" type="PackedScene" id=9]
 
 [node name="HexTile" type="Spatial"]
 script = ExtResource( 2 )
@@ -35,3 +36,6 @@ visible = false
 texture = ExtResource( 8 )
 hframes = 10
 frame = 7
+
+[node name="Thief" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.81887, 1.27596, 1.23834 )

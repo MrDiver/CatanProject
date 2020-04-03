@@ -19,7 +19,7 @@ margin_left = -54.0
 margin_top = -105.316
 margin_right = 54.0
 margin_bottom = -67.3158
-text = "Host Game"
+text = "Spiel Erstellen"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,7 +33,7 @@ margin_left = -54.0
 margin_top = -20.0526
 margin_right = 54.0
 margin_bottom = 17.9474
-text = "Join Game"
+text = "Spiel Beitreten"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -180,7 +180,32 @@ margin_bottom = -144.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="queryip" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 258.0
+margin_top = 17.0
+margin_right = 341.0
+margin_bottom = 39.0
+text = "Query IP"
+
+[node name="Label4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 100.541
+margin_top = 68.9124
+margin_right = 381.541
+margin_bottom = 121.912
+text = "Query IP: Fügt öffentliche IP  in
+das IP Feld ein. Diese kann an Freunde
+gesendet werden um dem Spiel beizutreten"
 [connection signal="pressed" from="HostButton" to="." method="_on_HostButton_pressed"]
 [connection signal="pressed" from="JoinButton" to="." method="_on_JoinButton_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="text_changed" from="nameline" to="." method="_on_nameline_text_changed"]
+[connection signal="pressed" from="queryip" to="." method="_on_queryip_pressed"]
